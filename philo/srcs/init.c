@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   init.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aburnott <aburnott@student.42.fr>          +#+  +:+       +#+        */
+/*   By: aburnott <aburnott@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/19 19:11:06 by aburnott          #+#    #+#             */
-/*   Updated: 2023/05/04 14:57:39 by aburnott         ###   ########.fr       */
+/*   Updated: 2023/05/08 11:06:15 by aburnott         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@ int	init(char **av)
 	if (av[5] != 0)
 		rules.num_meals = ft_atoi(av[5]);
 	if (rules.time_to_die < 0 || rules.time_to_eat < 0
-		|| rules.time_to_sleep < 0 || rules.nb_philo < 2
+		|| rules.time_to_sleep < 0 || rules.nb_philo < 0
 		|| rules.num_meals < 0)
 		return (3);
 	return (allocation(&rules));
