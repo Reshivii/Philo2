@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   routine.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aburnott <aburnott@student.s19.be>         +#+  +:+       +#+        */
+/*   By: aburnott <aburnott@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/19 22:57:04 by aburnott          #+#    #+#             */
-/*   Updated: 2023/05/08 12:05:06 by aburnott         ###   ########.fr       */
+/*   Updated: 2023/05/09 13:48:42 by aburnott         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ void	*routine(void *philo_void)
 	t_philo	*philo;
 
 	philo = (t_philo *)philo_void;
-	if (philo->id % 2)
+	if ((!philo->id % 2))
 		ft_usleep((philo->rules->time_to_eat / 2), philo->rules);
 	while (!philo->rules->dead)
 	{
