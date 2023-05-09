@@ -6,7 +6,7 @@
 #    By: aburnott <aburnott@student.s19.be>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/11 19:02:44 by aburnott          #+#    #+#              #
-#    Updated: 2023/05/08 11:08:14 by aburnott         ###   ########.fr        #
+#    Updated: 2023/05/09 10:52:26 by aburnott         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ OBJS = $(SRCS:.c=.o)
 CC = gcc
 SFLAGS = -fsanitize=thread -g
 S2FLAGS = -fsanitize=address -g
-CFLAGS = -Wall -Werror -Wextra -pthread #$(S2FLAGS)
+CFLAGS = -Wall -Werror -Wextra -pthread $(SFLAGS)
 #IFLAGS = -I
 
 all: $(NAME)

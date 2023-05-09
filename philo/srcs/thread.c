@@ -6,7 +6,7 @@
 /*   By: aburnott <aburnott@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/24 11:56:58 by aburnott          #+#    #+#             */
-/*   Updated: 2023/05/03 11:51:44 by aburnott         ###   ########.fr       */
+/*   Updated: 2023/05/09 10:52:37 by aburnott         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,12 @@ int	init_thread(t_rules *rules)
 	{
 		philo[i].last_meal = get_time();
 		if (pthread_create(&philo[i].thread_id, NULL, &routine, &philo[i]))
+		{
+			destroy(rules, philo);
+			free(rules->fork);
+			free(rules->philo);
 			return (6);
+		}
 		i++;
 	}
 	check_dead(rules, rules->philo);
